@@ -24,7 +24,7 @@ namespace DesafioFundamentos.Models
             ListarVeiculos();
             if (veiculosEstacionados.Count > 0)
             {
-                string[] itensFormatados = veiculosEstacionados.Select(item => $"\n- Modelo: {item.Veiculoestacionado.Modelo} \n- Placa{item.Veiculoestacionado.Placa}").ToArray();
+                string[] itensFormatados = veiculosEstacionados.Select(item => $"\n- Modelo: {item.Veiculoestacionado.Modelo} \n- Placa: {item.Veiculoestacionado.Placa}").ToArray();
                 var opcoes = new ConsoleMenu<string>(itensFormatados);
                 int selecaoUsario = opcoes.ShowMenu();
                 // Pedir para o usuário digitar a placa e armazenar na variável placa
@@ -64,7 +64,7 @@ namespace DesafioFundamentos.Models
             if (veiculosEstacionados.Count > 0)
             {
 
-                Console.WriteLine("Digite a placa do veículo para remover:");
+                Console.Write("Digite a placa do veículo para remover: ");
                 // Pedir para o usuário digitar a placa e armazenar na variável placa
                 // *IMPLEMENTE AQUI*
                 string placa = Console.ReadLine();
@@ -142,12 +142,12 @@ namespace DesafioFundamentos.Models
             bool PrecoPHEhDecimal;
             do
             {
-                Console.WriteLine("Seja bem vindo ao sistema de estacionamento!\n" +
-                                  "Digite o preço inicial:");
+                Console.Write("Seja bem vindo ao sistema de estacionamento!\n" +
+                                  "Digite o preço inicial: R$");
 
                 PrecoIniciaEhDecimal = decimal.TryParse(Console.ReadLine(), out decimal PrecoInicial);
 
-                Console.WriteLine("Agora digite o preço por hora:");
+                Console.Write("Agora digite o preço por hora: R$");
 
                 PrecoPHEhDecimal = decimal.TryParse(Console.ReadLine(), out decimal PrecoPorHora);
                 if (PrecoIniciaEhDecimal || PrecoPHEhDecimal)

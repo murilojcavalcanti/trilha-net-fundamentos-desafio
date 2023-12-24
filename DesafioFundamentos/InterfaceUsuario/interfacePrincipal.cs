@@ -13,7 +13,7 @@ namespace DesafioFundamentos.InterfaceUsuario
         {
             var es = new Estacionamento();
             es.RecebeValores();
-            string[] opcoesUsuario ={ "1 - Cadastrar veículo", "2 - Remover veículo", "3 - Remover veículo (Menu interativo)", "4 - Listar veículos", "5 - Listar Cartões veículos", "6 - Encerrar" };
+            string[] opcoesUsuario ={ "1 - Cadastrar veículo", "2 - Remover veículo (Através da placa)", "3 - Remover veículo (Menu interativo)", "4 - Listar veículos", "5 - Listar Cartões veículos", "6 - Encerrar" };
             bool exibirMenu = true;
 
             do
